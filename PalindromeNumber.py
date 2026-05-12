@@ -26,3 +26,4 @@ else:
     print("Not a palindrome")
 
 # Time complexity: O(n) where n is the number of digits in the number. This is because we need to iterate through each digit of the number to reverse it.
+# Space complexity: O(1) because we are using only a constant amount of extra space to store the reversed number and the original number.

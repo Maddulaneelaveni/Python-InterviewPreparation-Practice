@@ -10,4 +10,5 @@ num += 1                                     # it is used to add one to the inte
 print(list(map(int, str(num))))        # it is used to convert the resulting integer back into a list of digits. We first convert the integer num back into a string using str(num), which allows us to access each digit as a character. Then, we use map(int, str(num)) to convert each character back into an integer, and finally, we wrap this in list() to create a list of digits. For example, if num is 124, then this line will output [1, 2, 4].
 
 # Time complexity: 0(n)
-# 
+# Space complexity: O(n)
+

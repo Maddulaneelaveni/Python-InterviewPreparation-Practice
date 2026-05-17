@@ -8,3 +8,6 @@ product = 1
 for d in digits:
     product *= d  # it is used to calculate the product of the digits in the list. We initialize a variable product to 1, and then we iterate through each digit d in the list of digits. For each digit, we multiply the current value of product by that digit (product *= d), which effectively accumulates the product of all the digits. For example, if digits is [1, 2, 3], then after this loop, product will become 1 * 2 * 3 = 6.
 print(product - sum(digits))
+
+# TC: O(n) where n is the number of digits in the input number. This is because we need to iterate through the digits to calculate both the product and the sum.
+# SC: O(n) because we are storing the digits in a list, which takes up space proportional to the number of digits in the input number.

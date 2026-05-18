@@ -11,3 +11,16 @@ print(product - sum(digits))
 
 # TC: O(n) where n is the number of digits in the input number. This is because we need to iterate through the digits to calculate both the product and the sum.
 # SC: O(n) because we are storing the digits in a list, which takes up space proportional to the number of digits in the input number.
+
+
+
+# DSA solution:
+num = int(input())
+product = 1
+total = 0
+while num > 0:
+    digit = num % 10      # it is used to extract the last digit of the number. We do this by taking the modulus of the number by 10, which gives us the remainder when the number is divided by 10. For example, if num is 123, then digit will be 3.
+    product *= digit     # it is used to calculate the product of the digits as we extract them. We initialize a variable product to 1, and then for each extracted digit, we multiply the current value of product by that digit (product *= digit), which effectively accumulates the product of all the digits. For example, if num is 123, then after processing the first digit (3), product will become 1 * 3 = 3. After processing the second digit (2), product will become 3 * 2 = 6. After processing the third digit (1), product will become 6 * 1 = 6.
+    total += digit
+    num //= 10
+print(product - total)

@@ -24,3 +24,6 @@ while num > 0:
     total += digit
     num //= 10
 print(product - total)
+
+# TC: O(log n) # where n is the input number. This is because the number of digits in a number is proportional to the logarithm of the number (base 10). Therefore, as we extract each digit, we are effectively iterating through the digits of the number, which takes O(log n) time.
+# SC: O(1) because we are using only a constant amount of extra space to store the product, total, and the current digit. We are not using any additional data structures that grow with the size of the input number.

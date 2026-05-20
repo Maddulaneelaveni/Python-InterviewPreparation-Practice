@@ -17,3 +17,6 @@ for i in range(len(num)):
         num[i] = '9'
         break
 print(int("".join(num)))
+
+# TC: O(n) where n is the number of digits in the input number. This is because we need to iterate through the list of digits to find the first occurrence of '6' and perform the replacement.
+# SC: O(n) because we are creating a list of characters from the input string, which takes up space proportional to the number of digits in the input number. Additionally, we are creating a new string when we join the list back together, which also takes up space proportional to the number of digits.

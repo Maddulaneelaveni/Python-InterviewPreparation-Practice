@@ -1,4 +1,4 @@
-# Maximum 69 Number :
+# Maximum 69 Number :   ( Leetcode - 1323 )
 # In this problem, we are given a positive integer num consisting of digits 6 and 9 only. We need to return the maximum number you can get by changing at most one digit (6 can be changed to 9, and 9 can be changed to 6).
 
 # Simple Python solution:

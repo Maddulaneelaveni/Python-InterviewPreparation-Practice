@@ -7,3 +7,13 @@ print(int(num.replace('6', '9', 1)))  # it is used to replace the first occurren
 
 # TC: O(n) where n is the number of digits in the input number. This is because the replace() method needs to scan through the string to find the first occurrence of '6' and perform the replacement.
 # SC: O(n) because we are creating a new string as a result of the replace operation, which takes up space proportional to the number of digits in the input number.
+
+
+
+# DSA solution:
+num = list(input())
+for i in range(len(num)):
+    if num[i] == '6':
+        num[i] = '9'
+        break
+print(int("".join(num)))

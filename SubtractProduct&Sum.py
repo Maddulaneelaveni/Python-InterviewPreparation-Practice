@@ -1,4 +1,4 @@
-# Subtract Product and Sum :
+# Subtract Product and Sum :  (Leetcode - 1281)
 # In this problem, we are given a positive integer n, and we need to find the difference between the product of its digits and the sum of its digits.
 
 # Simple Python solution:

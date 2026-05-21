@@ -1,4 +1,4 @@
-# Plus One : 
+# Plus One :  (Leetcode - 66)
 # It is a problem where we are given a non-empty array of digits representing a non-negative integer, and we need to add one to the integer. 
 # The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit. 
 # We need to return the resulting array of digits after adding one to the integer.
@@ -29,14 +29,14 @@ else:
 # TWO POINTERS APPROACH:
 
 digits = list(map(int, input().split()))
-left, right = 0, len(digits) - 1
-while right >= 0:
+left, right = 0, len(digits) - 1 # we initialize two pointers, left and right, to the start and end of the list of digits, respectively. The left pointer starts at index 0 (the most significant digit), and the right pointer starts at index len(digits) - 1 (the least significant digit). We will use these pointers to traverse the list from both ends towards the center, allowing us to efficiently find the rightmost digit that is less than 9 and handle the carry-over when adding one to the number.
+while right >= 0:     # we use a while loop to iterate through the list of digits from the rightmost end towards the left. The loop continues as long as the right pointer is greater than or equal to 0, which means we are still within the bounds of the list. This allows us to check each digit starting from the least significant digit and moving towards the most significant digit until we find a digit that is less than 9 or we exhaust all digits.
     if digits[right] < 9:
-        digits[right] += 1
+        digits[right] += 1 # it is used to increment the current digit by 1. This is done when we find a digit that is less than 9, which means we can simply add one to that digit without worrying about any carry-over to the next digit. For example, if the current digit is 3, then after this line, it will become 4.
         print(digits)
         break
-    digits[right] = 0
-    right -= 1
+    digits[right] = 0  # it is used to set the current digit to 0. This is done when we encounter a digit that is equal to 9, which means that adding one to it will result in a carry-over to the next digit. For example, if the current digit is 9, then after this line, it will become 0, and we need to continue checking the next digit to the left for further carry-over.
+    right -= 1      # it is used to move the right pointer one step to the left. This allows us to check the next digit in the list for potential carry-over when we encounter a digit that is equal to 9. For example, if the current digit is 9 and we set it to 0, we need to move the right pointer to the next digit on the left to check if it is also 9 and requires further carry-over.
 else:
     digits.insert(0, 1)
     print(digits)

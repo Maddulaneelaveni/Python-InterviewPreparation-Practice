@@ -24,3 +24,5 @@ if original_num==reversed_num:
     print("Palindrome") 
 else:
     print("Not a palindrome")
+
+# Time complexity: O(n) where n is the number of digits in the number. This is because we need to iterate through each digit of the number to reverse it.
